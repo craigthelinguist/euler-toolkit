@@ -1,4 +1,18 @@
 
+
+-- Return largest prime factor of a number.
+largestPrimeFactor :: Integer -> Integer
+largestPrimeFactor n = f starting n
+  where
+    starting  = ceiling (sqrt (fromIntegral n))
+    f curr n  = if curr <= 0
+                  then -1
+                else if (2 `divides` curr)
+                  then f (curr-1) n
+                else if isPrime curr && curr `divides` n
+                  then curr
+                else f (curr-2) n
+
 -- Return the prime factors of a number.
 primeFactors :: Integer -> [Integer]
 primeFactors n
