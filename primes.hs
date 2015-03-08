@@ -1,5 +1,4 @@
 
-
 -- Return the prime factors of a number.
 primeFactors :: Integer -> [Integer]
 primeFactors n
@@ -12,7 +11,7 @@ primeFactors n
                           then [n]
                         else [2]
       upper           = ceiling ( (toRational n) / 2)
-prime
+
 -- Return true if a divides b (that is k*a = b for some k).
 divides :: Integer -> Integer -> Bool
 divides a b = b `mod` a == 0
