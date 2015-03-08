@@ -1,5 +1,9 @@
 
 
+-- Return the sum of squares of a list.
+sos [] = 0
+sos (x:xs) = x*x + sos xs
+
 -- Return largest prime factor of a number.
 largestPrimeFactor :: Integer -> Integer
 largestPrimeFactor n = f starting n
